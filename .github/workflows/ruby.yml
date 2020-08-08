@@ -18,7 +18,7 @@ jobs:
     - name: Run Elasticsearch
       uses: tamofplease/elasticsearch-with-plugins-action@master
       with: 
-        stack-version: 7.6.2
+        stack-version: 7.6.1
         plugins: |
           analysis-kuromoji
     - name: Build and test
