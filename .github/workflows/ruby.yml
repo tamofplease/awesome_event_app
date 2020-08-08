@@ -15,7 +15,7 @@ jobs:
         sudo sysctl -w vm.swappiness=1
         sudo sysctl -w fs.file-max=262144
         sudo sysctl -w vm.max_map_count=262144
-    - name: Run Elasticseatch
+    - name: Run Elasticsearch
       uses: tamofplease/elasticsearch-with-plugins-action@v0
       with: 
         stack-version: 7.6.0

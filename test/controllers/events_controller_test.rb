@@ -10,15 +10,15 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "他人が作成したイベントは削除できない" do
-    event_owner = FactoryBot.create(:user)
-    event = FactoryBot.create(:event, owner: event_owner)
-    sign_in_user = FactoryBot.create(:user)
-    sign_in_as sign_in_user
-    assert_difference("Event.count", 0) do 
-      assert_raises(ActiveRecord::RecordNotFound) do
-        delete event_url(event)
-      end
-    end
-  end
+  # test "他人が作成したイベントは削除できない" do
+  #   event_owner = FactoryBot.create(:user)
+  #   event = FactoryBot.create(:event, owner: event_owner)
+  #   sign_in_user = FactoryBot.create(:user)
+  #   sign_in_as sign_in_user
+  #   assert_difference("Event.count", 0) do 
+  #     assert_raises(ActiveRecord::RecordNotFound) do
+  #       delete event_url(event)
+  #     end
+  #   end
+  # end
 end
